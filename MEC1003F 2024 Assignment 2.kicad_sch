@@ -5,13 +5,12 @@
   (paper "A4")
 
   (title_block
-    (title "MEC1003F 2024 Lecture 2 Demo")
-    (date "2024-04-10")
+    (title "MEC1003F 2024 Assignment 2")
+    (date "2024-04-15")
     (rev "v0.0")
     (company "University of Cape Town")
-    (comment 1 "Licence: Creative Commons")
-    (comment 3 "Department of Electrical Engineering")
-    (comment 4 "Lawrence Stanton")
+    (comment 3 "<Enter Student Number here>")
+    (comment 4 "<Enter Student Name here>")
   )
 
   (lib_symbols
@@ -22,7 +21,7 @@
       (property "Value" "1K" (at 5.08 0 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "" (at 5.08 -5.08 90)
+      (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 0 -12.7 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1811062009_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" (at 15.24 -10.16 0)
@@ -70,7 +69,7 @@
       (property "Value" "100K" (at 5.08 0 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "" (at 0 -15.24 0)
+      (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 0 -15.24 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1811062009_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" (at 15.24 -10.16 0)
@@ -214,7 +213,7 @@
       (property "Value" "680K" (at 5.08 0 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "" (at 5.08 -5.08 90)
+      (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 0 -15.24 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1811062009_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" (at 15.24 -10.16 0)
@@ -262,10 +261,13 @@
       (property "Value" "AP331AWRG-7" (at 22.86 0 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "" (at 17.78 -25.4 0)
+      (property "Footprint" "Project Footprints:SOT-23-5 (AP331A) MRF" (at 17.78 -25.4 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_1809051524_Diodes-Incorporated-AP331AWRG-7_C151561.pdf" (at 13.97 -34.925 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Comparator Open-Drain Output" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (symbol "AP331AWRG-7_0_1"
@@ -493,6 +495,126 @@
         )
       )
     )
+    (symbol "Project Symbols:CL21B105KBFNNNE" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "C" (at 5.08 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "1uF" (at 5.08 0 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 12.7 -12.7 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Samsung-Electro-Mechanics-CL05C100JB5NNNC_C32949.pdf" (at 30.48 -10.16 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Dielectric" "X7R" (at 7.62 -7.62 0)
+        (effects (font (size 0.762 0.762)))
+      )
+      (property "Voltage" "50V" (at 7.62 -5.08 0)
+        (effects (font (size 0.762 0.762)))
+      )
+      (property "Package" "0805" (at 7.62 -2.54 0)
+        (effects (font (size 0.762 0.762)))
+      )
+      (property "ki_keywords" "cap capacitor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Unpolarized capacitor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "C_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "CL21B105KBFNNNE_0_1"
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762)
+          )
+          (stroke (width 0.508) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762)
+          )
+          (stroke (width 0.508) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "CL21B105KBFNNNE_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -3.81 90) (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Project Symbols:CL31B225KBHNNNE" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "C" (at 5.08 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "2.2uF" (at 5.08 0 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 12.7 -12.7 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/YAGEO-CC0603KRX7R9BB104_C14663.pdf" (at 30.48 -10.16 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Dielectric" "C0G" (at 7.62 -7.62 0)
+        (effects (font (size 0.762 0.762)))
+      )
+      (property "Voltage" "50V" (at 7.62 -5.08 0)
+        (effects (font (size 0.762 0.762)))
+      )
+      (property "Package" "0603" (at 7.62 -2.54 0)
+        (effects (font (size 0.762 0.762)))
+      )
+      (property "ki_keywords" "cap capacitor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Unpolarized capacitor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "C_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "CL31B225KBHNNNE_0_1"
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762)
+          )
+          (stroke (width 0.508) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762)
+          )
+          (stroke (width 0.508) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "CL31B225KBHNNNE_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -3.81 90) (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Project Symbols:CROC" (pin_numbers hide) (in_bom yes) (on_board yes)
       (property "Reference" "J" (at 0 0 0)
         (effects (font (size 1.27 1.27)))
@@ -500,10 +622,13 @@
       (property "Value" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "" (at 0 0 0)
+      (property "Footprint" "Project Footprints:CROC MEDIUM" (at 7.62 -17.78 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Bite Pad for Crocodile Connector" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (symbol "CROC_0_1"
@@ -706,6 +831,95 @@
         )
       )
     )
+    (symbol "Project Symbols:LP2950CDTX-3.3/NOPB" (in_bom yes) (on_board yes)
+      (property "Reference" "U" (at 1.27 1.27 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "LP2950CDTX-3.3/NOPB" (at 7.62 -15.24 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Texas-Instruments-LP2950CDTX-3-3-NOPB_C129994.pdf" (at 2.54 -17.78 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "3V3 Linear Regulator" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "LP2950CDTX-3.3/NOPB_0_1"
+        (rectangle (start 0 0) (end 12.7 -10.16)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "LP2950CDTX-3.3/NOPB_1_1"
+        (pin power_in line (at 15.24 -7.62 180) (length 2.54)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_in line (at -2.54 -2.54 0) (length 2.54)
+          (name "IN" (effects (font (size 1.27 1.27))))
+          (number "" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_out line (at 15.24 -2.54 180) (length 2.54)
+          (name "VOUT" (effects (font (size 1.27 1.27))))
+          (number "" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "power:+3V3" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "+3V3" (at 0 3.556 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"+3V3\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "+3V3_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "+3V3_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+3V3" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "power:+BATT" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -824,6 +1038,12 @@
   (junction (at 160.02 127) (diameter 0) (color 0 0 0 0)
     (uuid 72600925-5456-4729-a9f5-22f28594c351)
   )
+  (junction (at 119.38 38.1) (diameter 0) (color 0 0 0 0)
+    (uuid 7278a4a5-cf92-45b6-a5ef-089850c1fa22)
+  )
+  (junction (at 160.02 38.1) (diameter 0) (color 0 0 0 0)
+    (uuid 84e43aa7-c7bf-4ceb-9feb-51c2816f77ac)
+  )
   (junction (at 90.17 132.08) (diameter 0) (color 0 0 0 0)
     (uuid a6d2e64e-bb4f-4b21-94f0-cc4c02ff41ee)
   )
@@ -913,6 +1133,10 @@
     (stroke (width 0) (type default))
     (uuid 4cd86657-f226-472e-9f82-b1ff14e693b9)
   )
+  (wire (pts (xy 149.86 43.18) (xy 152.4 43.18))
+    (stroke (width 0) (type default))
+    (uuid 5389cf2d-dff4-4999-bbfe-199150dc47d9)
+  )
   (wire (pts (xy 104.14 93.98) (xy 104.14 121.92))
     (stroke (width 0) (type default))
     (uuid 56159f25-ff8d-48da-aa2a-98436377d088)
@@ -924,6 +1148,14 @@
   (wire (pts (xy 160.02 92.71) (xy 160.02 114.3))
     (stroke (width 0) (type default))
     (uuid 59d3ef76-646b-44c3-983d-01e0963c6473)
+  )
+  (wire (pts (xy 119.38 38.1) (xy 132.08 38.1))
+    (stroke (width 0) (type default))
+    (uuid 5e03fd11-7377-46fe-ab6e-af38dcacef25)
+  )
+  (wire (pts (xy 160.02 38.1) (xy 160.02 35.56))
+    (stroke (width 0) (type default))
+    (uuid 5eaf825d-64e3-4e00-b13b-113e49647b0f)
   )
   (wire (pts (xy 66.04 121.92) (xy 66.04 132.08))
     (stroke (width 0) (type default))
@@ -949,6 +1181,14 @@
     (stroke (width 0) (type default))
     (uuid 8cca6b72-5f4a-40bd-bdaa-5e70f491ff60)
   )
+  (wire (pts (xy 152.4 43.18) (xy 152.4 45.72))
+    (stroke (width 0) (type default))
+    (uuid 8f6b9265-1e88-4ecf-8f83-eef76b9bbf37)
+  )
+  (wire (pts (xy 149.86 38.1) (xy 160.02 38.1))
+    (stroke (width 0) (type default))
+    (uuid 909b1303-31cd-45d8-badf-d02b9a990fd3)
+  )
   (wire (pts (xy 78.74 127) (xy 93.98 127))
     (stroke (width 0) (type default))
     (uuid 91b6602c-e67b-4b1d-8cc7-7f24fd88bf5d)
@@ -960,6 +1200,10 @@
   (wire (pts (xy 185.42 92.71) (xy 185.42 93.98))
     (stroke (width 0) (type default))
     (uuid 9de33fe2-da84-46dc-b2d8-efa8b9f6b8bc)
+  )
+  (wire (pts (xy 119.38 35.56) (xy 119.38 38.1))
+    (stroke (width 0) (type default))
+    (uuid 9e8465c0-27b7-4c63-8343-e45cc7d39d1f)
   )
   (wire (pts (xy 170.18 132.08) (xy 170.18 147.32))
     (stroke (width 0) (type default))
@@ -988,6 +1232,10 @@
   (wire (pts (xy 193.04 93.98) (xy 185.42 93.98))
     (stroke (width 0) (type default))
     (uuid b389d36b-6b80-4d04-8bdf-2f00a46ab3e0)
+  )
+  (wire (pts (xy 119.38 38.1) (xy 119.38 40.64))
+    (stroke (width 0) (type default))
+    (uuid b462522e-3901-4012-af33-a5df75ed8cd7)
   )
   (wire (pts (xy 90.17 147.32) (xy 107.95 147.32))
     (stroke (width 0) (type default))
@@ -1032,6 +1280,10 @@
   (wire (pts (xy 90.17 132.08) (xy 90.17 147.32))
     (stroke (width 0) (type default))
     (uuid f944a052-08c9-4cd3-910d-2b55aa119c8d)
+  )
+  (wire (pts (xy 160.02 38.1) (xy 160.02 40.64))
+    (stroke (width 0) (type default))
+    (uuid fe085244-4216-4d1a-a006-791fce1ad05f)
   )
   (wire (pts (xy 111.76 104.14) (xy 111.76 107.95))
     (stroke (width 0) (type default))
@@ -1080,7 +1332,7 @@
     )
     (pin "1" (uuid 0a32eaa3-adcb-4d8d-a537-1aaf6c9e7775))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR03") (unit 1)
         )
@@ -1105,7 +1357,7 @@
     )
     (pin "1" (uuid 240fb6e6-c451-4bfe-ae18-f4f60c22f736))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR015") (unit 1)
         )
@@ -1122,7 +1374,7 @@
     (property "Value" "680K" (at 195.58 139.7 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 200.66 142.24 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 200.66 142.24 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1811062009_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" (at 205.74 132.08 0)
@@ -1140,7 +1392,7 @@
     (pin "2" (uuid 8824379f-f07b-4e6e-a4cb-463f9a3aa113))
     (pin "1" (uuid dd04c69c-6901-419e-ab0a-85ddcda41981))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "R8") (unit 1)
         )
@@ -1165,7 +1417,7 @@
     )
     (pin "1" (uuid 8d541d04-c4db-4b60-aff6-20457f830653))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR011") (unit 1)
         )
@@ -1190,7 +1442,7 @@
     )
     (pin "1" (uuid 2809044c-b8f0-4d7f-84af-f89419094c3e))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR06") (unit 1)
         )
@@ -1225,9 +1477,34 @@
     (pin "1" (uuid 0f949018-c13d-4434-ac6a-30e6470e5815))
     (pin "2" (uuid 1bb32e93-ffe7-4510-b450-a3550254581f))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "C2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 152.4 45.72 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 18822599-2d52-423a-83d2-a3a702592547)
+    (property "Reference" "#PWR018" (at 152.4 52.07 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 152.4 50.8 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 152.4 45.72 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 152.4 45.72 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 97c6dd43-74eb-43bb-b5aa-6a06281ed2f0))
+    (instances
+      (project "MEC1003F 2024 Assignment 2"
+        (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -1242,7 +1519,7 @@
     (property "Value" "~" (at 29.21 17.78 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 29.21 17.78 0)
+    (property "Footprint" "Project Footprints:CROC MEDIUM" (at 29.21 17.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 29.21 17.78 0)
@@ -1250,7 +1527,7 @@
     )
     (pin "1" (uuid 77e960ed-0b37-409f-9c90-54c0f2b1508e))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "J1") (unit 1)
         )
@@ -1285,9 +1562,34 @@
     (pin "1" (uuid 72713f29-171c-4af2-a08b-afda2b4249a9))
     (pin "2" (uuid 48a0214f-2358-4d31-8ac8-f4194de51db4))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "R2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+BATT") (at 119.38 35.56 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 29d7c73a-99c3-4f24-bdf4-ea24bc8c8f0a)
+    (property "Reference" "#PWR016" (at 119.38 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+BATT" (at 119.38 30.48 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 119.38 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 119.38 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 430f519b-988f-4f04-a4b4-d4e300358924))
+    (instances
+      (project "MEC1003F 2024 Assignment 2"
+        (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -1302,7 +1604,7 @@
     (property "Value" "100K" (at 68.58 117.475 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 71.12 123.19 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 71.12 123.19 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1811062009_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" (at 81.28 128.27 0)
@@ -1320,9 +1622,34 @@
     (pin "1" (uuid fc7028a3-0659-46bd-ac28-3c7c71f36e91))
     (pin "2" (uuid 31ca2644-008f-4cf6-87b9-3d7549bdf5dc))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "R4") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 119.38 48.26 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 3578c359-96e1-495b-ac72-6b9351fcf493)
+    (property "Reference" "#PWR019" (at 119.38 54.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 119.38 53.34 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 119.38 48.26 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 119.38 48.26 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid d8a82587-f579-4c49-bf57-362ebef109c0))
+    (instances
+      (project "MEC1003F 2024 Assignment 2"
+        (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -1345,7 +1672,7 @@
     )
     (pin "1" (uuid 478fd5d6-ab29-47d8-8465-d90f346921c1))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR05") (unit 1)
         )
@@ -1370,34 +1697,9 @@
     )
     (pin "1" (uuid aeb32e9b-defe-462a-8be3-c049743b92ac))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR07") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+BATT") (at 215.9 91.44 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 546c01c3-dc30-40a2-9c45-2730cdfa0d3c)
-    (property "Reference" "#PWR013" (at 215.9 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+BATT" (at 215.9 86.36 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 215.9 91.44 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 215.9 91.44 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f850595f-124b-4bdb-ba28-7999797cfb1e))
-    (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
-        (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
-          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -1430,7 +1732,7 @@
     (pin "2" (uuid e571fb3f-4f31-492d-bb4a-86b616e533d1))
     (pin "1" (uuid 3ffbc4d3-87d8-44af-89c6-2d816cf08e8c))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "C3") (unit 1)
         )
@@ -1455,7 +1757,7 @@
     )
     (pin "1" (uuid 17cc38d1-e67b-4986-b539-6cbd374b2dfc))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR01") (unit 1)
         )
@@ -1480,7 +1782,7 @@
     )
     (pin "1" (uuid fd744f0f-03f8-4b83-a3e2-425b70d34d7a))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR010") (unit 1)
         )
@@ -1505,7 +1807,7 @@
     )
     (pin "1" (uuid 3a0ba3a8-e51b-45e0-ad27-650d2bf541fd))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR014") (unit 1)
         )
@@ -1530,7 +1832,7 @@
     )
     (pin "1" (uuid 36ba2a42-16db-4d6b-86e7-120c39bfcace))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR012") (unit 1)
         )
@@ -1565,7 +1867,7 @@
     (pin "1" (uuid b923658a-24ab-48bd-8e89-ab1524f76a84))
     (pin "2" (uuid f121154b-5e15-4913-8de2-5b3f5a12163a))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "R9") (unit 1)
         )
@@ -1582,7 +1884,7 @@
     (property "Value" "100K" (at 111.76 139.7 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 116.84 142.24 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 116.84 142.24 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1811062009_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" (at 121.92 132.08 0)
@@ -1600,7 +1902,7 @@
     (pin "1" (uuid c8274469-7d7e-490a-84b9-34805f56caf4))
     (pin "2" (uuid a38ca809-618d-472f-bb18-8bfccf994a84))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "R5") (unit 1)
         )
@@ -1617,7 +1919,7 @@
     (property "Value" "~" (at 29.21 43.18 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 29.21 43.18 0)
+    (property "Footprint" "Project Footprints:CROC MEDIUM" (at 29.21 43.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 29.21 43.18 0)
@@ -1625,7 +1927,7 @@
     )
     (pin "1" (uuid 7c594a11-8e64-4b3a-a951-46051bfa382e))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "J2") (unit 1)
         )
@@ -1660,7 +1962,7 @@
     (pin "2" (uuid b9b9561b-31cc-4be3-a375-e909160c7f2c))
     (pin "1" (uuid 42c3f38f-98ea-4aca-88ae-7b6c51667928))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "C1") (unit 1)
         )
@@ -1685,9 +1987,36 @@
     )
     (pin "1" (uuid 9ea23043-1f3c-4244-8fe2-3c327a035fa8))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR08") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Project Symbols:LP2950CDTX-3.3/NOPB") (at 134.62 35.56 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 9cbaff67-6a02-473b-8d5a-a416f12d1517)
+    (property "Reference" "U3" (at 140.97 30.48 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LP2950CDTX-3.3/NOPB" (at 140.97 33.02 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 134.62 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Texas-Instruments-LP2950CDTX-3-3-NOPB_C129994.pdf" (at 137.16 53.34 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "" (uuid a806bb27-7dd1-43e7-93a3-e37de2a26db4))
+    (pin "" (uuid c2fe6e18-af2a-41ac-813a-8255ff2f2b94))
+    (pin "" (uuid 861a8ed5-b3a2-4838-b84f-d307fa787067))
+    (instances
+      (project "MEC1003F 2024 Assignment 2"
+        (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
+          (reference "U3") (unit 1)
         )
       )
     )
@@ -1710,7 +2039,7 @@
     )
     (pin "1" (uuid daadb559-9eee-4292-96dd-104f5016497f))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR09") (unit 1)
         )
@@ -1727,7 +2056,7 @@
     (property "Value" "100K" (at 162.56 140.335 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 165.1 146.05 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 165.1 146.05 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1811062009_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" (at 175.26 151.13 0)
@@ -1745,7 +2074,7 @@
     (pin "1" (uuid 0b3369df-036b-4a75-bf30-4bade4db4aa7))
     (pin "2" (uuid ecbd40eb-2a35-434d-b2bf-08bcc3e36989))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "R7") (unit 1)
         )
@@ -1762,7 +2091,7 @@
     (property "Value" "100K" (at 162.56 117.475 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 165.1 123.19 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 165.1 123.19 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1811062009_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" (at 175.26 128.27 0)
@@ -1780,9 +2109,69 @@
     (pin "1" (uuid 8cad3bc8-a2e7-47cc-b645-f9cb770b27e4))
     (pin "2" (uuid 77e3a29f-ca17-4454-be8b-2184d8baaca2))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "R6") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Project Symbols:CL21B105KBFNNNE") (at 119.38 44.45 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid b3e1a95c-ebf5-4e4f-bcf0-ae8ec24b1951)
+    (property "Reference" "C4" (at 123.19 41.275 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "1uF" (at 123.19 43.815 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 132.08 57.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Samsung-Electro-Mechanics-CL05C100JB5NNNC_C32949.pdf" (at 149.86 54.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Dielectric" "X7R" (at 123.19 45.7199 0)
+      (effects (font (size 0.762 0.762)) (justify left))
+    )
+    (property "Voltage" "50V" (at 123.19 46.9899 0)
+      (effects (font (size 0.762 0.762)) (justify left))
+    )
+    (property "Package" "0805" (at 123.19 48.2599 0)
+      (effects (font (size 0.762 0.762)) (justify left))
+    )
+    (pin "2" (uuid 9a9fcc43-bdf5-40f0-aae2-0b31ceb95d28))
+    (pin "1" (uuid 60c50e51-351a-4861-9a63-61fa718212b8))
+    (instances
+      (project "MEC1003F 2024 Assignment 2"
+        (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
+          (reference "C4") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 160.02 48.26 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid b4de97e4-96ea-4028-8284-13e3edc20f10)
+    (property "Reference" "#PWR020" (at 160.02 54.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 160.02 53.34 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 160.02 48.26 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 160.02 48.26 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 10f3b2dd-7153-4643-9e85-440b68d26ee5))
+    (instances
+      (project "MEC1003F 2024 Assignment 2"
+        (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -1797,7 +2186,7 @@
     (property "Value" "AP331AWRG-7" (at 120.65 127.8891 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 111.76 147.32 0)
+    (property "Footprint" "Project Footprints:SOT-23-5 (AP331A) MRF" (at 111.76 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_1809051524_Diodes-Incorporated-AP331AWRG-7_C151561.pdf" (at 107.95 156.845 0)
@@ -1809,7 +2198,7 @@
     (pin "5" (uuid 254f783d-24f3-4308-a769-cc3aaf958244))
     (pin "3" (uuid 3b16177a-5c8c-44b2-ba41-260058c3d10a))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "U1") (unit 1)
         )
@@ -1826,7 +2215,7 @@
     (property "Value" "1K" (at 137.16 99.695 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 139.7 105.41 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 139.7 105.41 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1811062009_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" (at 149.86 110.49 0)
@@ -1844,9 +2233,44 @@
     (pin "2" (uuid bd068340-3baa-45ea-a300-fb80a24bf10a))
     (pin "1" (uuid a3f58cda-8cc5-4e74-98f2-918adb020c04))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "R1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Project Symbols:CL31B225KBHNNNE") (at 160.02 44.45 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d04aeb22-ce48-40ce-bd9a-da83a0391101)
+    (property "Reference" "C5" (at 163.83 41.275 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "2.2uF" (at 163.83 43.815 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 172.72 57.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/YAGEO-CC0603KRX7R9BB104_C14663.pdf" (at 190.5 54.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Dielectric" "C0G" (at 163.83 45.7199 0)
+      (effects (font (size 0.762 0.762)) (justify left))
+    )
+    (property "Voltage" "50V" (at 163.83 46.9899 0)
+      (effects (font (size 0.762 0.762)) (justify left))
+    )
+    (property "Package" "0603" (at 163.83 48.2599 0)
+      (effects (font (size 0.762 0.762)) (justify left))
+    )
+    (pin "2" (uuid 96139aad-2c2a-45e7-8c27-2bd20f19c85f))
+    (pin "1" (uuid 89a8d77b-3961-4a7c-a1c4-edf09d7f6a58))
+    (instances
+      (project "MEC1003F 2024 Assignment 2"
+        (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
+          (reference "C5") (unit 1)
         )
       )
     )
@@ -1869,9 +2293,34 @@
     )
     (pin "1" (uuid c485c275-b28a-4819-ae42-96c988704434))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR04") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 160.02 35.56 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d4610dd3-ad50-4716-a836-30b23fc2cda5)
+    (property "Reference" "#PWR017" (at 160.02 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 160.02 30.48 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 160.02 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 160.02 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid dfd93514-4f4d-4961-b510-fdd6966c582e))
+    (instances
+      (project "MEC1003F 2024 Assignment 2"
+        (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -1886,7 +2335,7 @@
     (property "Value" "100K" (at 68.58 140.335 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 71.12 146.05 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 71.12 146.05 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1811062009_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" (at 81.28 151.13 0)
@@ -1904,9 +2353,34 @@
     (pin "1" (uuid 09d4a2dd-9ad8-46d2-978f-b339944effed))
     (pin "2" (uuid 1bb109c8-549c-4603-b6e8-122561d49c25))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "R3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 215.9 91.44 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid e8e50cd1-ee6d-46bc-abec-543299d53211)
+    (property "Reference" "#PWR013" (at 215.9 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 215.9 86.36 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 215.9 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 215.9 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 30bb4aff-9f11-41f3-aef9-55a62d5adc54))
+    (instances
+      (project "MEC1003F 2024 Assignment 2"
+        (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -1929,7 +2403,7 @@
     )
     (pin "1" (uuid c114c72b-bda8-41e5-af61-7c7a675859d0))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "#PWR02") (unit 1)
         )
@@ -1946,7 +2420,7 @@
     (property "Value" "AP331AWRG-7" (at 201.93 127.8891 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 193.04 147.32 0)
+    (property "Footprint" "Project Footprints:SOT-23-5 (AP331A) MRF" (at 193.04 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_1809051524_Diodes-Incorporated-AP331AWRG-7_C151561.pdf" (at 189.23 156.845 0)
@@ -1958,7 +2432,7 @@
     (pin "5" (uuid 4ee8257a-755d-4dc5-8cbf-23591be57827))
     (pin "3" (uuid a6a8a257-db3c-45cf-81af-fd46d7a3f7af))
     (instances
-      (project "MEC1003F-2024-Lecture-2-Demo"
+      (project "MEC1003F 2024 Assignment 2"
         (path "/e0cd1853-2523-4e2d-9373-07e51d2931b2"
           (reference "U2") (unit 1)
         )
