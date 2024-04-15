@@ -17,9 +17,10 @@ In the last lecture we started with a template project which provided a set of s
 	- The last power flag has been changed from `+BATT` to `+3V3`.
 	- A voltage regulator has been added to the circuit (creating `+3V3`).
 	- The voltage regulator pins numbers have not been specified.
-3. Open the Symbol Editor and you should find the `Project Symbols` library. This library contains all the symbols for this project.
-4. Open the Footprint Editor and you should find the `Project Footprints` library. This library contains all the footprints for this project.
-5. Open the PCB Editor. You should find this blank.
+3. **Edit the schematic page info to enter your student name and number!!!**
+4. Open the Symbol Editor and you should find the `Project Symbols` library. This library contains all the symbols for this project.
+5. Open the Footprint Editor and you should find the `Project Footprints` library. This library contains all the footprints for this project.
+6. Open the PCB Editor. You should find this blank.
 
 With this you should have the general outline of the project you are working with.
 
@@ -67,6 +68,11 @@ With this you should have a complete circuit with all the necessary footprints.
 Getting the footprints to the PCB is all we expect for now. However, if you want to go further, you can try to layout and route the PCB. This is not required, but if you do, you will receive bonus marks.
 
 1 mark will be awarded to a layout that is reasonably well done, with an appropriate board outline and ground pour. 1 mark will be awarded for complete traces and reasonable us of vias.
+
+## Submission Instructions
+
+ZIP the entire repository and submit it to Amathuba. Remember to include your student number in the schematic page info!
+
 
 ## Support
 
