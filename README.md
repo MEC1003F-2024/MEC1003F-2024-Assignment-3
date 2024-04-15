@@ -1,62 +1,73 @@
-# MEC1003F Lecture 2 Demo
+# MEC1003F 2024 Assignment 2
 
-KiCad Demonstration Project for UCT MEC1003F 2024
-
-## Lesson Plan
-
-In this lecture you will use this demo project to learn how to create footprints, layout a PCB, and route traces and vias to make some basic connections between components.
+Starting repository for MEC1003F 2024 Assignment 2.
 
 ## Overview
 
-Open the KiCad project file [MEC1003F-2024-Lecture-2-Demo.kicad_pro](MEC1003F-2024-Lecture-2-Demo.kicad_pro) in KiCad and check out the schematic. You should recognise a familiar AP331A comparator with some passive components! Again, this is not about the circuit design, but for those curious the first comparator circuit is a simple relaxation oscillator, while the second is simple hysteresis comparator which translates the output to another voltage level.
+For this assignment you will demonstrate your ability to make a basic footprint, link it with a schematic symbol, and populate a PCB with a complete circuit.
 
-The operation of the circuit isn't that important, for us it is simply two IC components with a bunch of passives we can use as practice for layout and routing.
+Bonus marks are also available for laying out and routing the PCB.
 
-Although the schematic looks complete, the components aren't quite ready for layout. And so we begin!
+In the last lecture we started with a template project which provided a set of schematic symbols and some footprints, but not all. Additionally, that entire circuit was powered from `+BATT`. However, in this assignment we will make a small change by adding a voltage regulator to the circuit, and using that regulated voltage to change the output amplitude of the second comparator's output.
 
-## PCB Information
+## Initial Instructions
 
-Before we can dive right into it we must first learn a bit more about PCBs and how they are modelled in EDA tools like KiCad. Pay attention in lecture as we explain the following key things:
+1. Clone or download this repository to your local machine. If downloading manually, remember to extract the contents of the zip file!
+2. Open the schematic in KiCad. You should notice the following changes:
+	- The last power flag has been changed from `+BATT` to `+3V3`.
+	- A voltage regulator has been added to the circuit (creating `+3V3`).
+	- The voltage regulator pins numbers have not been specified.
+3. Open the Symbol Editor and you should find the `Project Symbols` library. This library contains all the symbols for this project.
+4. Open the Footprint Editor and you should find the `Project Footprints` library. This library contains all the footprints for this project.
+5. Open the PCB Editor. You should find this blank.
 
-- **Layer Stackup**: The PCB is made up of multiple layers, each with a specific purpose. Each of these layers is modelled as either 2D layers or other properties of the PCB file.
-- **Technical vs User Layers**: Some layers in KiCad are simply for human reference, while others are used for specific purposes like copper, the board outline, solder mask, and silkscreen.
-- **Courtyards and Spacing**: Components cannot be placed too close together, and so we most often draw a courtyard around the component to show the minimum spacing required.
+With this you should have the general outline of the project you are working with.
 
-## Footprints
+## Tasks
 
-### Task 1: Crocodile Pad
+### 1. Complete the Voltage Regulator Symbol (3 marks)
 
-Most circuits need a way to connect to the outside world. This is usually done with a connector, but for this demo we will use a simple crocodile clip pad. This is a simple through-hole pad with copper on each side which can be used to bite down onto with a crocodile clip.
+Open the linked datasheet for the LP2950. All the information you require to complete the component model is in there.
 
-In the lecture we will explain how to create a new footprint for this pad and then update the symbol.
+Do the following:
 
-### Task 2: Comparator
+1. Open the symbol editor and find the `LP2950` symbol in the `Project Symbols` library.
+2. Identify which specific footprint package the given symbol should be linked to (TO-92/TO-252/DIP/SOIC/VSSOOP/WSON).
+3. Given the identified package, edit the symbol to number the pins accordingly.
+4. Save the symbol.
 
-Like the crocodile pad, the comparator footprint is not assigned. However, this is a bit more complicated as the footprint is a SOT-23-5 which is specified in the datasheet.
+### 2. Create the Voltage Regulator Footprint (10 marks)
 
-In the lecture we will demonstrate how we might go about creating a new footprint per the specification.
+Given the package identified in the previous task, create a new footprint for the voltage regulator:
 
-### Task 3: Passive Components
+1. Open the footprint editor and open the `Project Footprints` library.
+2. You can create the footprint in whatever way you like, but as a reminder, you can typically go one of two routes:
+   1. Search for an existing component within the KiCad standard libraries, or elsewhere, that generally matches the package type and modify it to match the exact dimensions of the LP2950 datasheet; or,
+   2. Create a new footprint from scratch.
+3. In addition to the pads (which are critical), also add a silkscreen outline and a reference designator.
+4. Also, ensure you place an appropriate courtyard and component outline on the relevant layers.
+5. Save the footprint.
+6. Go back to the symbol editor and link the `LP2950` symbol to the newly created footprint.
+7. Save the symbol.
+8. Update the schematic symbol to use the new symbol footprint.
+    > If you have any issues updating the symbol, simply place a new symbol and delete the old one.
+9. Save the schematic.
 
-Some of the passive components are also not assigned. Although we could create new footprints for these.. these are just simple chip components. Assuming they are close enough, we will instead use the existing footprints from the KiCad standard library to save some time.
+With this you should have a complete circuit with all the necessary footprints.
 
-## PCB & Layout
+### 3. Populate the PCB (2 marks)
 
-Once we have all the footprints assigned, we can start the PCB layout. This is where we will place the components and route the traces to make the connections.
+1. Open the PCB editor.
+2. Update the PCB from the schematic and place all components. This should produce a PCB with all the components placed.
+3. Check your footprints! Now that everything is placed, ensure that all the footprints look correct. If you made any error in dimensions or forgot to add some features, hopefully you notice it here.
+4. Save the PCB.
 
-Follow the instructions in lecture to update the PCB with the schematic components, and then place and route the components.
+### 4. Bonus: Layout and Route the PCB (2 marks)
 
-This is a very hard task to explain in words, and practise is the only way to get the grip of layout & routing, but with some tips and tricks you should be able to get a good start.
+Getting the footprints to the PCB is all we expect for now. However, if you want to go further, you can try to layout and route the PCB. This is not required, but if you do, you will receive bonus marks.
 
-### Key PCB Elements
+1 mark will be awarded to a layout that is reasonably well done, with an appropriate board outline and ground pour. 1 mark will be awarded for complete traces and reasonable us of vias.
 
-While routing the PCB, pay attention to learn how to place the following key elements:
+## Support
 
-- **Board Outline**: The outline of the PCB is important to define the shape of the board. This is usually drawn on the Edge.Cuts layer.
-- **Traces**: The most important part of the PCB is the copper traces which connect the components. These are drawn on the Copper layers.
-- **Vias**: To connect traces on different layers, we use vias. These are plated holes which connect the copper on different layers.
-- **Copper Pours**: Sometimes we need to fill an area with copper, either to provide a ground plane, make a heatsink, or just to make a non-uniform trace. This is done with a copper pour or "filled zone".
-
-## Next Lecture
-
-In this lecture we were just focusing on getting things onto the PCB and how to route them. In the next lecture we will focus on the design rules and how to check that the PCB is manufacturable. We'll also go a step further and consider some of the specific requirements for JLCPCB, the PCB manufacturer we will be using most often.
+Remember that you can ask for help at any time. Post your questions on MS Teams Under the `Assignments` channel or otherwise contact the lecturer for some hints. This is an important assignment and we want you to do well and get comfortable doing this!
