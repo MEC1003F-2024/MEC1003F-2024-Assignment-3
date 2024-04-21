@@ -3,7 +3,16 @@
   "ignorePaths": [],
   "dictionaryDefinitions": [],
   "dictionaries": [],
-  "words": ["heatsink", "kicad", "vias"],
+  "words": [
+    "Amathuba",
+    "BATT",
+    "heatsink",
+    "JLCPCB",
+    "kicad",
+    "Ratsnest",
+    "Reflow",
+    "vias"
+  ],
   "ignoreWords": [],
   "import": []
 }

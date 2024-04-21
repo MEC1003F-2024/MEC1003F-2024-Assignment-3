@@ -1,78 +1,113 @@
-# MEC1003F 2024 Assignment 2
+# MEC1003F 2024 Assignment 3
 
-Starting repository for MEC1003F 2024 Assignment 2.
+Starting repository for MEC1003F 2024 Assignment 3.
 
 ## Overview
 
-For this assignment you will demonstrate your ability to make a basic footprint, link it with a schematic symbol, and populate a PCB with a complete circuit.
+For this assignment you will demonstrate your ability to layout and route a PCB. You are given a schematic with some components and all footprints completed, and you will need to complete the PCB from here.
 
-Bonus marks are also available for laying out and routing the PCB.
+Bonus marks are also available for exporting the design to Gerber files. Note this was not yet covered fully in lectures, but this will be required for the class test so best to get some practice and bonus marks in now.
 
-In the last lecture we started with a template project which provided a set of schematic symbols and some footprints, but not all. Additionally, that entire circuit was powered from `+BATT`. However, in this assignment we will make a small change by adding a voltage regulator to the circuit, and using that regulated voltage to change the output amplitude of the second comparator's output.
+In the last assignment the schematic was for a basic relaxation oscillator and level shifter, and you added a voltage regulator to provide a 3.3V supply. Now in this schematic there is additionally 2 dual D Flip-Flops which divide the frequency of the oscillator by 16. This is a proper circuit! It will take you some time to practice laying out various arrangements before you get a good one, and so this assignment will take a little longer than the last two. Beware and start on it early!
 
 ## Initial Instructions
 
-1. Clone or download this repository to your local machine. If downloading manually, remember to extract the contents of the zip file!
-2. Open the schematic in KiCad. You should notice the following changes:
-	- The last power flag has been changed from `+BATT` to `+3V3`.
-	- A voltage regulator has been added to the circuit (creating `+3V3`).
-	- The voltage regulator pins numbers have not been specified.
+1. Clone or download this repository to your local machine. If downloading manually, remember to extract the contents of the .zip file!
+2. Open the KiCad project by opening the `.kicad_pro` file. This will open the project in KiCad.
+3. Open the schematic in KiCad. You should notice the following changes:
+    - All components have had their footprints created by yours truly. Cross check the TO-252 footprint to check your work from Assignment 2.
+    - New circuitry for 2x Dual D Flip-Flops has been added. This configuration is detailed a little in the datasheet - try figure out what it does!
+
+> [!TIP]
+> The symbol for the Dual D Flip Flops are multi-unit symbols. This means each whole component has been broken down into multiple parts, which has benefits for a part like this. The designators gain an alpha suffix (e.g. U1A, U1B, U1C, etc.). The pins across all parts sum to the whole component. Check out the symbol to see how this is made!
+
 3. **Edit the schematic page info to enter your student name and number!!!**
-4. Open the Symbol Editor and you should find the `Project Symbols` library. This library contains all the symbols for this project.
-5. Open the Footprint Editor and you should find the `Project Footprints` library. This library contains all the footprints for this project.
-6. Open the PCB Editor. You should find this blank.
+4. Open the PCB Editor. You should find this blank. Update the PCB with the schematic info and place all the components. Take a look in the 3D viewer and see what's happening!
+
+> [!NOTE]
+> Sometimes the project footprints library won't load if opening in a different KiCad version. If you have issues with the footprints, you can add the library manually. Go to `Preferences > Manage Footprint Libraries > Project Specific Libraries > Add Existing` and add the `Project Footprints` library from the project folder directory.
 
 With this you should have the general outline of the project you are working with.
 
 ## Tasks
 
-### 1. Complete the Voltage Regulator Symbol (3 marks)
+### 1. Set the Design Rules (5 marks)
 
-Open the linked datasheet for the LP2950. All the information you require to complete the component model is in there.
+Before you start laying out the PCB, you should set the design rules. This is important to ensure that the PCB is manufacturable.
 
-Do the following:
+- Open the PCB Editor and go to `File > Board Setup > Design Rules > Constraints`.
+- Set all relevant basic design rules according to the capabilities of JLCPCB (https://jlcpcb.com/capabilities/pcb-capabilities).
 
-1. Open the symbol editor and find the `LP2950` symbol in the `Project Symbols` library.
-2. Identify which specific footprint package the given symbol should be linked to (TO-92/TO-252/DIP/SOIC/VSSOOP/WSON).
-3. Given the identified package, edit the symbol to number the pins accordingly.
-4. Save the symbol.
+> [!TIP]
+> Setting some appropriate pre-defined sizes for tracks and vias now can also help ensure you conform to the design rules.
 
-### 2. Create the Voltage Regulator Footprint (10 marks)
+The tutors are skilled that they can easily tell from the PCB if you set a bad design rule or not. Remember to consider the PCB manufacturing process, and consider the components you are using, and set appropriate margins for the design rules.
 
-Given the package identified in the previous task, create a new footprint for the voltage regulator:
+It is absolutely not required to program custom rules, but if you want to, you can and these can be helpful.
 
-1. Open the footprint editor and open the `Project Footprints` library.
-2. You can create the footprint in whatever way you like, but as a reminder, you can typically go one of two routes:
-   1. Search for an existing component within the KiCad standard libraries, or elsewhere, that generally matches the package type and modify it to match the exact dimensions of the LP2950 datasheet; or,
-   2. Create a new footprint from scratch.
-3. In addition to the pads (which are critical), also add a silkscreen outline and a reference designator.
-4. Also, ensure you place an appropriate courtyard and component outline on the relevant layers.
-5. Save the footprint.
-6. Go back to the symbol editor and link the `LP2950` symbol to the newly created footprint.
-7. Save the symbol.
-8. Update the schematic symbol to use the new symbol footprint.
-    > If you have any issues updating the symbol, simply place a new symbol and delete the old one.
-9. Save the schematic.
+### 2. Layout Components (5 marks)
 
-With this you should have a complete circuit with all the necessary footprints.
+Reorientate all components to a layout that makes sense. There are a lot of components now, so remember the method shown in lecture that can help simplify the process:
 
-### 3. Populate the PCB (2 marks)
+- Open the PCB and Schematic editors side by side and ensure cross-probing is enabled. Use this to keep track of what's what.
 
-1. Open the PCB editor.
-2. Update the PCB from the schematic and place all components. This should produce a PCB with all the components placed.
-3. Check your footprints! Now that everything is placed, ensure that all the footprints look correct. If you made any error in dimensions or forgot to add some features, hopefully you notice it here.
-4. Save the PCB.
+> [!TIP]
+> If cross probing is not working, check `Preferences > Schematic Editor > Display Options > Cross Probing` and ensure it is enabled.
 
-### 4. Bonus: Layout and Route the PCB (2 marks)
+- Hide the Silkscreen and other unnecessary layers for now. You can do this by clicking the eye icon in the right UI column. We can deal with the non-critical layers later.
+- Identify the various groups of components (e.g. oscillator, level shifter, voltage regulator, flip-flops) with the supporting peripheral components. Separate these groups of components in the PCB editor.
+- For each group now move, rotate and layout the components in a way that makes general sense and as best you can understand the function of each component within these groups.
 
-Getting the footprints to the PCB is all we expect for now. However, if you want to go further, you can try to layout and route the PCB. This is not required, but if you do, you will receive bonus marks.
+> [!TIP]
+> Setting an appropriate grid size can help with this (topmost icon in the left UI column). Try a grid size of 0.5mm.
 
-1 mark will be awarded to a layout that is reasonably well done, with an appropriate board outline and ground pour. 1 mark will be awarded for complete traces and reasonable us of vias.
+- Don't route yet! Try use the ratsnest lines to tell if the layout is ok. Ignore the big nets for power and ground for now, or you can hide these lines by right clicking on the net name on a pad and selecting `Net Inspection Tools > Hide net in Ratsnest`.
+
+### 3. Route (5 marks)
+
+Now that you have a basic layout that makes sense, you can start routing these groups.
+
+- To start, just route the short nets local to the groups you've laid out. Remember the shortcut 'X' to start routing. Ignore the input, output, power and ground nets between components (although obviously still consider how these will come in and out later).
+- Ensure you use an appropriate track width and via size, and toggle through your preferred sizes with 'W'. At a minimum, you must have different track widths for power and signal lines.
+- Simply route `GND` nets to a quick via and drop them to the bottom layer. We will place a ground pour on the bottom layer later which will connect all the GND vias. Similarly, we will route in `+BATT` and `+3V3` later.
+- You cannot possibly complete the routing without the use of some vias. Use them! Shortcut 'V'. Just remember to keep routing on the bottom layer short and sweet - we want to reserve that layer for `GND` as much as possible.
+
+### 3. Board Outline, Final Layout, and Ground Pour (4 marks)
+
+- Draw a board outline (on the Edge.Cuts layer) for this PCB, set it as a 50x50mm square. Remember this is the typical smallest handling size for JLCPCB without added costs.
+- Place a ground pour on the entire bottom layer. This will connect all the GND vias you've placed. Remember to set the net to `GND` in the properties of the pour.
+- Place the crocodile bite pads as connectors around the board edge.
+- Now, move the semi-routed groups of components to a final layout that makes sense relative to one another. There's no prize for using less than the full 50x50mm, so keep this simple and logical in location and rotation.
+- Complete the routing of the remaining inter-group nets and the power and ground nets. Reflow the ground pour if necessary with 'B'.
+
+### 4. Final Details (2 marks)
+
+Now unhide the silkscreen and other hidden layers. Place these elements appropriately and ensure the designators ad other drawing elements are visible and not overlapping, and indicate the designation of each and every component.
+
+> [!TIP]
+> Dimming other layers ('H') can help focus and setting the active layer helps preference selecting items on that layer.
+
+For this assignment you **must** place all silkscreen designators.
+
+Finally, add your name, student number, version, and any other details you want to the silkscreen. This is a good habit to get into for your own projects. You are also welcome to add things like mounting holes, etc if you really want the prize for top design!
+
+### 5. Checks
+
+Before you submit, check your design thoroughly for errors. Especially, this means run the Design Rule Check (DRC) and ensure there are no errors. The tutors are skilled enough to see most errors by eye, and to know what errors are critical vs what can be waived. Go through each error and either resolve it or, if you are confident the error or warning is not actually an issue, dismiss it. So if you choose to dismiss a DRC error, make 100% sure you are justified in doing so given your understanding of the manufacturing process.
+
+**Before you submit, there should be zer DRC errors and preferably no warnings.**
+
+Simply viewing the PCB in 3D view can also help you spot any obvious issues in component placement.
+
+### 6. Bonus: Gerber & Drill Export (+2 marks)
+
+Export the PCB to Gerber and Drill files. This is not required for the assignment (bonus marks), but it is good practice and will be required for the class test. You can do this by going to `File > Fabrication Outputs > Gerber Files` and following the prompts. Also remember to export the Drill files too. Follow the instructions by JLCPCB for this (https://jlcpcb.com/help/article/362-how-to-generate-gerber-and-drill-files-in-kicad-7), and set the output folder to "Fabrication" in the project directory.
+
+You can then view the Gerber files in a Gerber viewer to check the design, or better upload a .zip of the fabrication output to JLCPCB!
 
 ## Submission Instructions
 
-ZIP the entire repository and submit it to Amathuba. Remember to include your student number in the schematic page info!
-
+ZIP the entire project folder and submit it to Amathuba. Remember to include your student number in the schematic page info and PCB silkscreen!
 
 ## Support
 
